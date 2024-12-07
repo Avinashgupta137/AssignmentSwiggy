@@ -66,6 +66,11 @@ extension MainViewController : UITableViewDelegate , UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return EstimateItemStatus.allCases.count
     }
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+            switch EstimateItemStatus.allCases[indexPath.section] {
+            case .flateOff:
+                return 250 
+            }
+        }
 }
 
