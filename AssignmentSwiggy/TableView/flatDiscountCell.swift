@@ -16,8 +16,10 @@ class flatDiscountCell: UITableViewCell {
         didSet {
             imgPaging.numberOfPages = imageData.count
             collectionView.reloadData()
+            startAutoScroll()
         }
     }
+    private var autoScrollTimer: Timer?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,16 +30,48 @@ class flatDiscountCell: UITableViewCell {
         imgPaging.currentPage = 0
         imgPaging.addTarget(self, action: #selector(pageControlTapped(_:)), for: .valueChanged)
     }
+    
+    deinit {
+        stopAutoScroll() // Ensure the timer is invalidated when the cell is deallocated
+    }
+    
     @objc private func pageControlTapped(_ sender: UIPageControl) {
         let page = sender.currentPage
         let indexPath = IndexPath(item: page, section: 0)
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
     }
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
+    
+    // MARK: - Auto-Scroll Logic
+    private func startAutoScroll() {
+        stopAutoScroll() // Stop any existing timer
+        autoScrollTimer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(scrollToNextPage), userInfo: nil, repeats: true)
     }
     
+    private func stopAutoScroll() {
+        autoScrollTimer?.invalidate()
+        autoScrollTimer = nil
+    }
+    @objc private func scrollToNextPage() {
+        let visibleIndex = Int(collectionView.contentOffset.x / collectionView.frame.width)
+        let nextIndex = visibleIndex + 1
+        
+        if nextIndex < imageData.count {
+            // Scroll to the next page
+            let indexPath = IndexPath(item: nextIndex, section: 0)
+            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+            imgPaging.currentPage = nextIndex
+        } else {
+            // Reset to the first page smoothly
+            let indexPath = IndexPath(item: 0, section: 0)
+            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+            imgPaging.currentPage = 0
+        }
+    }
+    
+    // MARK: - Selection
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
     
     
 }
