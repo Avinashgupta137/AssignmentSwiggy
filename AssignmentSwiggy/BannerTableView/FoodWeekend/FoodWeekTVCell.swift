@@ -37,13 +37,11 @@ extension FoodWeekTVCell: UICollectionViewDataSource, UICollectionViewDelegateFl
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1 //EstimateItemStatus.allCases.count
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return  1
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -58,7 +56,7 @@ extension FoodWeekTVCell: UICollectionViewDataSource, UICollectionViewDelegateFl
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) // Adjust if needed
+        return UIEdgeInsets(top: -10, left: 0, bottom: 0, right: 0) // Adjust if needed
     }
     
     // MARK: - Horizontal Scrolling for Items within Each Section

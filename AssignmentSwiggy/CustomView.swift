@@ -117,3 +117,20 @@ class InspectableImageView: UIImageView {
         }
     }
 }
+class RoundedCornerView: UIView {
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.roundCorners(corners: [.bottomLeft, .bottomRight], radius: 30)
+    }
+    
+}
+extension UIView {
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: self.bounds,
+                                byRoundingCorners: corners,
+                                cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        self.layer.mask = mask
+    }
+}

@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="397" height="193"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="emy-yQ-yxf">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="emy-yQ-yxf" customClass="RoundedCornerView" customModule="AssignmentSwiggy" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="397" height="193"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flatdiscount3" translatesAutoresizingMaskIntoConstraints="NO" id="i9r-t0-pCs">
