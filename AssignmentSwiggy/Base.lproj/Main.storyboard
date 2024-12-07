@@ -17,17 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sz5-Qa-9rM" customClass="StickyHeaderView" customModule="AssignmentSwiggy" customModuleProvider="target">
-                                <rect key="frame" x="10" y="59" width="373" height="136"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="286"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="136" id="fLz-kT-mJ7"/>
+                                    <constraint firstAttribute="height" constant="286" id="fLz-kT-mJ7"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-4b-c8C">
-                                <rect key="frame" x="0.0" y="195" width="393" height="657"/>
+                                <rect key="frame" x="0.0" y="345" width="393" height="507"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9zd-8Y-lbD">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="657"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="507"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <connections>
                                             <outlet property="dataSource" destination="BYZ-38-t0r" id="iev-Au-tNF"/>
@@ -47,13 +47,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="sz5-Qa-9rM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="0k5-xs-ne8"/>
+                            <constraint firstItem="sz5-Qa-9rM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0k5-xs-ne8"/>
                             <constraint firstItem="uMQ-4b-c8C" firstAttribute="top" secondItem="sz5-Qa-9rM" secondAttribute="bottom" id="8J4-Fy-c5i"/>
                             <constraint firstItem="uMQ-4b-c8C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="F68-UT-lKR"/>
                             <constraint firstItem="sz5-Qa-9rM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Lk6-B2-bZC"/>
                             <constraint firstItem="uMQ-4b-c8C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RaY-vA-FKf"/>
                             <constraint firstItem="uMQ-4b-c8C" firstAttribute="top" secondItem="sz5-Qa-9rM" secondAttribute="bottom" id="VhI-c7-buI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sz5-Qa-9rM" secondAttribute="trailing" constant="10" id="kYx-S5-fcX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sz5-Qa-9rM" secondAttribute="trailing" id="kYx-S5-fcX"/>
                             <constraint firstItem="uMQ-4b-c8C" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kcc-jG-glx"/>
                             <constraint firstAttribute="bottom" secondItem="uMQ-4b-c8C" secondAttribute="bottom" id="wFm-bC-zNS"/>
                             <constraint firstItem="uMQ-4b-c8C" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="y88-db-56a"/>

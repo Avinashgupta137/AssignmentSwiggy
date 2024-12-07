@@ -19,17 +19,17 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="664" height="208"/>
+            <rect key="frame" x="0.0" y="0.0" width="684" height="265"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLK-Bl-PCA">
-                    <rect key="frame" x="10" y="0.0" width="644" height="60"/>
+                    <rect key="frame" x="10" y="0.0" width="664" height="60"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="dNI-Xc-Byp">
-                            <rect key="frame" x="0.0" y="0.0" width="644" height="60"/>
+                            <rect key="frame" x="0.0" y="0.0" width="664" height="60"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="3Vb-Se-naf">
-                                    <rect key="frame" x="0.0" y="0.0" width="548" height="54.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="568" height="54.666666666666664"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvv-CY-7Vk">
                                             <rect key="frame" x="0.0" y="0.0" width="95.666666666666671" height="34.333333333333336"/>
@@ -45,7 +45,7 @@
                                     </subviews>
                                 </stackView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pWp-na-N8r">
-                                    <rect key="frame" x="584" y="1" width="60" height="58.666666666666671"/>
+                                    <rect key="frame" x="604" y="1" width="60" height="58.666666666666671"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="60" id="MN3-P3-u8d"/>
                                         <constraint firstAttribute="width" constant="60" id="PwY-Yc-GJs"/>
@@ -59,7 +59,7 @@
                             </constraints>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     <constraints>
                         <constraint firstItem="dNI-Xc-Byp" firstAttribute="leading" secondItem="OLK-Bl-PCA" secondAttribute="leading" id="1fG-DI-L6a"/>
                         <constraint firstAttribute="bottom" secondItem="dNI-Xc-Byp" secondAttribute="bottom" id="2Tc-I6-85T"/>
@@ -68,10 +68,12 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yoO-OA-N33" customClass="CustomView" customModule="AssignmentSwiggy" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="70" width="664" height="94"/>
+                    <rect key="frame" x="0.0" y="70" width="684" height="45"/>
                     <subviews>
                         <searchBar contentMode="redraw" placeholder="Search" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yS-fS-47I">
-                            <rect key="frame" x="0.0" y="0.0" width="674" height="94"/>
+                            <rect key="frame" x="0.0" y="0.0" width="684" height="45"/>
+                            <color key="backgroundColor" red="1" green="0.5568627451" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="1" green="0.5568627451" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <textInputTraits key="textInputTraits"/>
                             <scopeButtonTitles>
                                 <string>Title</string>
@@ -79,7 +81,7 @@
                             </scopeButtonTitles>
                         </searchBar>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="3yS-fS-47I" secondAttribute="trailing" id="642-Qj-BRA"/>
                         <constraint firstItem="3yS-fS-47I" firstAttribute="leading" secondItem="yoO-OA-N33" secondAttribute="leading" id="88m-jH-px2"/>
@@ -98,27 +100,50 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AOV-RZ-7Ep" customClass="CustomView" customModule="AssignmentSwiggy" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="115" width="684" height="150"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flatdiscount2" translatesAutoresizingMaskIntoConstraints="NO" id="AhH-eX-j2U">
+                            <rect key="frame" x="0.0" y="0.0" width="684" height="150"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="AhH-eX-j2U" secondAttribute="trailing" id="0Y4-tC-KDy"/>
+                        <constraint firstItem="AhH-eX-j2U" firstAttribute="top" secondItem="AOV-RZ-7Ep" secondAttribute="top" id="6a2-kS-A8f"/>
+                        <constraint firstAttribute="bottom" secondItem="AhH-eX-j2U" secondAttribute="bottom" id="LVE-oY-Rq6"/>
+                        <constraint firstItem="AhH-eX-j2U" firstAttribute="leading" secondItem="AOV-RZ-7Ep" secondAttribute="leading" id="own-0g-2Yy"/>
+                        <constraint firstAttribute="height" constant="150" id="uVW-0r-Ywl"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" systemColor="systemOrangeColor"/>
             <constraints>
                 <constraint firstItem="OLK-Bl-PCA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="33M-BH-EfC"/>
                 <constraint firstItem="yoO-OA-N33" firstAttribute="top" secondItem="OLK-Bl-PCA" secondAttribute="bottom" constant="10" id="FSB-d3-vAX"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yoO-OA-N33" secondAttribute="trailing" id="LOy-gN-O4Z"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="yoO-OA-N33" secondAttribute="bottom" constant="10" id="fjA-HI-31z"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="AOV-RZ-7Ep" secondAttribute="trailing" id="NTa-4H-O0E"/>
+                <constraint firstItem="AOV-RZ-7Ep" firstAttribute="top" secondItem="yoO-OA-N33" secondAttribute="bottom" id="Ot4-nY-q4z"/>
+                <constraint firstAttribute="bottom" secondItem="AOV-RZ-7Ep" secondAttribute="bottom" id="bOR-QT-sH9"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OLK-Bl-PCA" secondAttribute="trailing" constant="10" id="gg2-aI-9J9"/>
                 <constraint firstItem="yoO-OA-N33" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jUa-JI-CVN"/>
                 <constraint firstItem="OLK-Bl-PCA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="kNw-g5-H4e"/>
+                <constraint firstItem="AOV-RZ-7Ep" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vAX-7U-LhN"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="320.61068702290078" y="-238.02816901408451"/>
+            <point key="canvasLocation" x="335.87786259541986" y="-217.95774647887325"/>
         </view>
     </objects>
     <resources>
+        <image name="flatdiscount2" width="426.66665649414062" height="209.33332824707031"/>
         <image name="location.fill" catalog="system" width="128" height="119"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

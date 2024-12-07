@@ -48,7 +48,7 @@ extension MainViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch EstimateItemStatus.allCases[section] {
         case .flateOff:
-            return EstimateItemStatus.allCases[section].displayPromotionData().count
+            return 1//EstimateItemStatus.allCases[section].displayPromotionData().count
         }
     }
     

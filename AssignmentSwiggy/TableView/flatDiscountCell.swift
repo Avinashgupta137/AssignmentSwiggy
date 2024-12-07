@@ -10,13 +10,29 @@ import UIKit
 class flatDiscountCell: UITableViewCell {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var imgPaging: UIPageControl!
+    
+    var imageData: [String] = [] {
+           didSet {
+               imgPaging.numberOfPages = imageData.count
+               collectionView.reloadData()
+           }
+       }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.isPagingEnabled = true
         collectionView.register(UINib.init(nibName: "flatDiscountCVCell", bundle: nil), forCellWithReuseIdentifier: "cellCV")
+        imgPaging.currentPage = 0
+                imgPaging.addTarget(self, action: #selector(pageControlTapped(_:)), for: .valueChanged)
     }
-
+    @objc private func pageControlTapped(_ sender: UIPageControl) {
+            let page = sender.currentPage
+            let indexPath = IndexPath(item: page, section: 0)
+            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
@@ -57,14 +73,17 @@ extension flatDiscountCell: UICollectionViewDataSource, UICollectionViewDelegate
 
     // MARK: - FlowLayout for Full-Width Cells
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let width = collectionView.frame.width // Make the cell width match the screen width
-            return CGSize(width: width, height: 200) // Adjust the height as needed (e.g., 200)
+            let width = collectionView.frame.width
+            return CGSize(width: width, height: 250)
         }
-
-        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+            let page = Int(scrollView.contentOffset.x / collectionView.frame.width)
+            imgPaging.currentPage = page
+        }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
             return UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0) // Adjust if needed
         }
-
+        
         // MARK: - Horizontal Scrolling for Items within Each Section
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
             return 0 // Remove spacing between cells if you want them to touch
@@ -77,4 +96,5 @@ extension flatDiscountCell: UICollectionViewDataSource, UICollectionViewDelegate
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sectionInsetForSectionAt section: Int) -> UIEdgeInsets {
             return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) // Remove section insets if you want cells to touch
         }
+        
 }
