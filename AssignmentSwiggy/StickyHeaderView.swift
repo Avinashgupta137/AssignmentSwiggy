@@ -13,7 +13,7 @@ class StickyHeaderView: UIView {
     @IBOutlet weak var btnLocation: UIButton!
     @IBOutlet weak var lblLocation: UILabel!
     @IBOutlet weak var imgProfile: UIImageView!
-    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var searchBar: UITextField!
     @IBOutlet weak var HeaderView: UIView!
     
     

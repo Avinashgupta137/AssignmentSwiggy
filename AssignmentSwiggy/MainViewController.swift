@@ -7,11 +7,11 @@
 
 import UIKit
 
-
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var headerView: StickyHeaderView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var headerHeight: NSLayoutConstraint!
     
     let refreshControl = UIRefreshControl()
     
@@ -22,8 +22,8 @@ class MainViewController: UIViewController {
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        let headerHeight = headerView.frame.height
-        print("Header view height: \(headerHeight)")
+        headerHeight.constant = headerView.frame.height
+        print("Header view height: \(headerView.frame.height)")
     }
 
     private func setupStickyHeader() {
@@ -39,14 +39,6 @@ class MainViewController: UIViewController {
     @objc func refreshData(){
         tableView.reloadData()
         refreshControl.endRefreshing()
-    }
-    
-}
-
-extension MainViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let query = searchBar.text, !query.isEmpty else { return }
-        print("Search for: \(query)")
     }
 }
 

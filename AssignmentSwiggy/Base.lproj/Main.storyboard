@@ -17,17 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sz5-Qa-9rM" customClass="StickyHeaderView" customModule="AssignmentSwiggy" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="59" width="393" height="136"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="105"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="136" id="fLz-kT-mJ7"/>
+                                    <constraint firstAttribute="height" constant="105" id="eBA-ta-sSc"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-4b-c8C">
-                                <rect key="frame" x="0.0" y="195" width="393" height="657"/>
+                                <rect key="frame" x="0.0" y="164" width="393" height="688"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9zd-8Y-lbD">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="657"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="688"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <connections>
                                             <outlet property="dataSource" destination="BYZ-38-t0r" id="iev-Au-tNF"/>
@@ -61,6 +61,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="uai-gH-PaY"/>
                     <connections>
+                        <outlet property="headerHeight" destination="eBA-ta-sSc" id="Upm-jH-5d7"/>
                         <outlet property="headerView" destination="sz5-Qa-9rM" id="ZBm-i9-GCb"/>
                         <outlet property="tableView" destination="9zd-8Y-lbD" id="DDg-ah-8By"/>
                     </connections>
