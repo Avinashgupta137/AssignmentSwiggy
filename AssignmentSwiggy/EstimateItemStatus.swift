@@ -27,4 +27,4 @@ struct PromotionData {
     let image: UIImage?
 }
 
-let promotionDisplayData = [PromotionData(image: UIImage(named: "flatdiscount"))]
+let promotionDisplayData = [PromotionData(image: UIImage(named: "flatdiscount2")) ,PromotionData(image: UIImage(named: "flatdiscount2"))]

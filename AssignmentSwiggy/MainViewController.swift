@@ -42,7 +42,7 @@ extension MainViewController: UISearchBarDelegate {
     }
 }
 //MARK: CollectionView
-extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout , UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch EstimateItemStatus.allCases[indexPath.section] {
         case .flateOff:
@@ -71,6 +71,26 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         print("Selected item at section \(indexPath.section), row \(indexPath.row)")
     }
 
-    // MARK: - FlowLayout
-    
+    // MARK: - FlowLayout for Full-Width Cells
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            let width = collectionView.frame.width // Make the cell width match the screen width
+            return CGSize(width: width, height: 200) // Adjust the height as needed (e.g., 200)
+        }
+        
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+            return UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0) // Adjust if needed
+        }
+        
+        // MARK: - Horizontal Scrolling for Items within Each Section
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+            return 0 // Remove spacing between cells if you want them to touch
+        }
+
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+            return 0 // Remove spacing between cells if you want them to touch
+        }
+
+        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sectionInsetForSectionAt section: Int) -> UIEdgeInsets {
+            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) // Remove section insets if you want cells to touch
+        }
 }
