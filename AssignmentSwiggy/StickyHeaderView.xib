@@ -22,94 +22,109 @@
             <rect key="frame" x="0.0" y="0.0" width="558" height="146"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLK-Bl-PCA">
-                    <rect key="frame" x="0.0" y="0.0" width="558" height="60"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tjb-PU-DBQ">
+                    <rect key="frame" x="0.0" y="0.0" width="558" height="146"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="dNI-Xc-Byp">
-                            <rect key="frame" x="0.0" y="0.0" width="558" height="60"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLK-Bl-PCA">
+                            <rect key="frame" x="10" y="0.0" width="538" height="60"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="3Vb-Se-naf">
-                                    <rect key="frame" x="0.0" y="0.0" width="462" height="54.666666666666664"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="dNI-Xc-Byp">
+                                    <rect key="frame" x="0.0" y="0.0" width="538" height="60"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvv-CY-7Vk">
-                                            <rect key="frame" x="0.0" y="0.0" width="95.666666666666671" height="34.333333333333336"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="location.fill" catalog="system" title="Office"/>
-                                        </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Block 1st floor swiggy Embasssy Tech" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BlX-sL-dpp">
-                                            <rect key="frame" x="0.0" y="34.333333333333336" width="287" height="20.333333333333336"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="3Vb-Se-naf">
+                                            <rect key="frame" x="0.0" y="0.0" width="442" height="54.666666666666664"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvv-CY-7Vk">
+                                                    <rect key="frame" x="0.0" y="0.0" width="95.666666666666671" height="34.333333333333336"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="location.fill" catalog="system" title="Office"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Block 1st floor swiggy Embasssy Tech" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BlX-sL-dpp">
+                                                    <rect key="frame" x="0.0" y="34.333333333333336" width="287" height="20.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pWp-na-N8r">
+                                            <rect key="frame" x="478" y="0.66666666666666785" width="60" height="58.666666666666657"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="MN3-P3-u8d"/>
+                                                <constraint firstAttribute="width" constant="60" id="PwY-Yc-GJs"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
-                                </stackView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pWp-na-N8r">
-                                    <rect key="frame" x="498" y="0.66666666666666785" width="60" height="58.666666666666657"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="60" id="MN3-P3-u8d"/>
-                                        <constraint firstAttribute="width" constant="60" id="PwY-Yc-GJs"/>
+                                        <constraint firstItem="pWp-na-N8r" firstAttribute="top" secondItem="dNI-Xc-Byp" secondAttribute="top" id="NAa-yz-ZIm"/>
+                                        <constraint firstAttribute="bottom" secondItem="pWp-na-N8r" secondAttribute="bottom" id="TBg-om-3pM"/>
+                                        <constraint firstAttribute="trailing" secondItem="pWp-na-N8r" secondAttribute="trailing" id="gPi-Mg-ERk"/>
                                     </constraints>
-                                </imageView>
+                                </stackView>
                             </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="pWp-na-N8r" firstAttribute="top" secondItem="dNI-Xc-Byp" secondAttribute="top" id="NAa-yz-ZIm"/>
-                                <constraint firstAttribute="bottom" secondItem="pWp-na-N8r" secondAttribute="bottom" id="TBg-om-3pM"/>
-                                <constraint firstAttribute="trailing" secondItem="pWp-na-N8r" secondAttribute="trailing" id="gPi-Mg-ERk"/>
+                                <constraint firstItem="dNI-Xc-Byp" firstAttribute="leading" secondItem="OLK-Bl-PCA" secondAttribute="leading" id="1fG-DI-L6a"/>
+                                <constraint firstAttribute="bottom" secondItem="dNI-Xc-Byp" secondAttribute="bottom" id="2Tc-I6-85T"/>
+                                <constraint firstItem="dNI-Xc-Byp" firstAttribute="top" secondItem="OLK-Bl-PCA" secondAttribute="top" id="FTd-h6-SuR"/>
+                                <constraint firstAttribute="trailing" secondItem="dNI-Xc-Byp" secondAttribute="trailing" id="a25-P9-FHN"/>
                             </constraints>
-                        </stackView>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yoO-OA-N33" customClass="CustomView" customModule="AssignmentSwiggy" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="60" width="558" height="86"/>
+                            <subviews>
+                                <searchBar contentMode="redraw" placeholder="Search" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yS-fS-47I">
+                                    <rect key="frame" x="0.0" y="0.0" width="558" height="86"/>
+                                    <color key="backgroundColor" red="1" green="0.5568627451" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="tintColor" red="1" green="0.5568627451" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <scopeButtonTitles>
+                                        <string>Title</string>
+                                        <string>Title</string>
+                                    </scopeButtonTitles>
+                                </searchBar>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="3yS-fS-47I" secondAttribute="trailing" id="642-Qj-BRA"/>
+                                <constraint firstItem="3yS-fS-47I" firstAttribute="leading" secondItem="yoO-OA-N33" secondAttribute="leading" id="88m-jH-px2"/>
+                                <constraint firstItem="3yS-fS-47I" firstAttribute="top" secondItem="yoO-OA-N33" secondAttribute="top" id="99o-WI-Qf0"/>
+                                <constraint firstAttribute="bottom" secondItem="3yS-fS-47I" secondAttribute="bottom" id="M2B-m6-9OC"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     <constraints>
-                        <constraint firstItem="dNI-Xc-Byp" firstAttribute="leading" secondItem="OLK-Bl-PCA" secondAttribute="leading" id="1fG-DI-L6a"/>
-                        <constraint firstAttribute="bottom" secondItem="dNI-Xc-Byp" secondAttribute="bottom" id="2Tc-I6-85T"/>
-                        <constraint firstItem="dNI-Xc-Byp" firstAttribute="top" secondItem="OLK-Bl-PCA" secondAttribute="top" id="FTd-h6-SuR"/>
-                        <constraint firstAttribute="trailing" secondItem="dNI-Xc-Byp" secondAttribute="trailing" id="a25-P9-FHN"/>
+                        <constraint firstItem="OLK-Bl-PCA" firstAttribute="leading" secondItem="Tjb-PU-DBQ" secondAttribute="leading" constant="10" id="8OH-iF-6VV"/>
+                        <constraint firstItem="OLK-Bl-PCA" firstAttribute="top" secondItem="Tjb-PU-DBQ" secondAttribute="top" id="9KP-ye-bRI"/>
+                        <constraint firstAttribute="trailing" secondItem="OLK-Bl-PCA" secondAttribute="trailing" constant="10" id="APV-kM-eCM"/>
+                        <constraint firstItem="yoO-OA-N33" firstAttribute="top" secondItem="OLK-Bl-PCA" secondAttribute="bottom" id="Fcf-h9-t8j"/>
+                        <constraint firstItem="yoO-OA-N33" firstAttribute="leading" secondItem="Tjb-PU-DBQ" secondAttribute="leading" id="TcX-Zn-Dex"/>
+                        <constraint firstAttribute="bottom" secondItem="yoO-OA-N33" secondAttribute="bottom" id="Xrz-hk-xp0"/>
+                        <constraint firstItem="OLK-Bl-PCA" firstAttribute="top" secondItem="Tjb-PU-DBQ" secondAttribute="top" id="eKa-lH-wCJ"/>
+                        <constraint firstItem="yoO-OA-N33" firstAttribute="top" secondItem="OLK-Bl-PCA" secondAttribute="bottom" id="ftn-8p-9Ws"/>
+                        <constraint firstAttribute="trailing" secondItem="yoO-OA-N33" secondAttribute="trailing" id="pbU-H9-yjR"/>
                     </constraints>
-                </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yoO-OA-N33" customClass="CustomView" customModule="AssignmentSwiggy" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="70" width="558" height="56"/>
-                    <subviews>
-                        <searchBar contentMode="redraw" placeholder="Search" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yS-fS-47I">
-                            <rect key="frame" x="0.0" y="0.0" width="558" height="56"/>
-                            <color key="backgroundColor" red="1" green="0.5568627451" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <color key="tintColor" red="1" green="0.5568627451" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <scopeButtonTitles>
-                                <string>Title</string>
-                                <string>Title</string>
-                            </scopeButtonTitles>
-                        </searchBar>
-                    </subviews>
-                    <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                    <constraints>
-                        <constraint firstAttribute="trailing" secondItem="3yS-fS-47I" secondAttribute="trailing" id="642-Qj-BRA"/>
-                        <constraint firstItem="3yS-fS-47I" firstAttribute="leading" secondItem="yoO-OA-N33" secondAttribute="leading" id="88m-jH-px2"/>
-                        <constraint firstItem="3yS-fS-47I" firstAttribute="top" secondItem="yoO-OA-N33" secondAttribute="top" id="99o-WI-Qf0"/>
-                        <constraint firstAttribute="bottom" secondItem="3yS-fS-47I" secondAttribute="bottom" id="M2B-m6-9OC"/>
-                    </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                            <real key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="10"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemOrangeColor"/>
             <constraints>
-                <constraint firstItem="OLK-Bl-PCA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="33M-BH-EfC"/>
-                <constraint firstItem="yoO-OA-N33" firstAttribute="top" secondItem="OLK-Bl-PCA" secondAttribute="bottom" constant="10" id="FSB-d3-vAX"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yoO-OA-N33" secondAttribute="trailing" id="LOy-gN-O4Z"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OLK-Bl-PCA" secondAttribute="trailing" id="gg2-aI-9J9"/>
-                <constraint firstItem="yoO-OA-N33" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jUa-JI-CVN"/>
-                <constraint firstItem="OLK-Bl-PCA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="kNw-g5-H4e"/>
+                <constraint firstAttribute="bottom" secondItem="Tjb-PU-DBQ" secondAttribute="bottom" id="7i0-4A-4Ku"/>
+                <constraint firstItem="Tjb-PU-DBQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="PRx-W3-2Gt"/>
+                <constraint firstItem="Tjb-PU-DBQ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="lhw-tO-7pi"/>
+                <constraint firstItem="Tjb-PU-DBQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="o9h-AO-9qJ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="239.69465648854961" y="-259.85915492957747"/>

@@ -13,7 +13,8 @@ class MainViewController: UIViewController {
     @IBOutlet weak var headerView: StickyHeaderView!
     @IBOutlet weak var tableView: UITableView!
     
-   
+    let refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupStickyHeader()
@@ -30,8 +31,14 @@ class MainViewController: UIViewController {
         headerView.searchBar.delegate = self
     }
     func uiUpdate() {
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
         tableView.register(UINib(nibName: "FoodWeekTVCell", bundle: nil), forCellReuseIdentifier: "cellTVfood")
         tableView.register(UINib(nibName: "flatDiscountCell", bundle: nil), forCellReuseIdentifier: "cellTV")
+    }
+    @objc func refreshData(){
+        tableView.reloadData()
+        refreshControl.endRefreshing()
     }
     
 }
