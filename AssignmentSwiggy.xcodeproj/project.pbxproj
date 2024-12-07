@@ -20,6 +20,10 @@
 		C75770332D04320100CDBBDC /* flatOffCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75770312D04320100CDBBDC /* flatOffCVCell.swift */; };
 		C75770342D04320100CDBBDC /* flatOffCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C75770322D04320100CDBBDC /* flatOffCVCell.xib */; };
 		C75770362D0444CF00CDBBDC /* EstimateItemStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75770352D0444CF00CDBBDC /* EstimateItemStatus.swift */; };
+		C757703A2D0453BC00CDBBDC /* flatDiscountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75770382D0453BC00CDBBDC /* flatDiscountCell.swift */; };
+		C757703B2D0453BC00CDBBDC /* flatDiscountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C75770392D0453BC00CDBBDC /* flatDiscountCell.xib */; };
+		C757703F2D04542800CDBBDC /* flatDiscountCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C757703D2D04542800CDBBDC /* flatDiscountCVCell.swift */; };
+		C75770402D04542800CDBBDC /* flatDiscountCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C757703E2D04542800CDBBDC /* flatDiscountCVCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		C75770312D04320100CDBBDC /* flatOffCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flatOffCVCell.swift; sourceTree = "<group>"; };
 		C75770322D04320100CDBBDC /* flatOffCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = flatOffCVCell.xib; sourceTree = "<group>"; };
 		C75770352D0444CF00CDBBDC /* EstimateItemStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateItemStatus.swift; sourceTree = "<group>"; };
+		C75770382D0453BC00CDBBDC /* flatDiscountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flatDiscountCell.swift; sourceTree = "<group>"; };
+		C75770392D0453BC00CDBBDC /* flatDiscountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = flatDiscountCell.xib; sourceTree = "<group>"; };
+		C757703D2D04542800CDBBDC /* flatDiscountCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = flatDiscountCVCell.swift; sourceTree = "<group>"; };
+		C757703E2D04542800CDBBDC /* flatDiscountCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = flatDiscountCVCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,7 @@
 				C7559C5C2D040F0900DF5907 /* AppDelegate.swift */,
 				C7559C5E2D040F0900DF5907 /* SceneDelegate.swift */,
 				C7559C602D040F0900DF5907 /* MainViewController.swift */,
+				C75770372D04538500CDBBDC /* TableView */,
 				C7559C702D04106A00DF5907 /* DetailsViewController.swift */,
 				C7559C772D041CB700DF5907 /* StickyHeaderView.swift */,
 				C757702F2D042EBA00CDBBDC /* CustomView.swift */,
@@ -86,6 +95,25 @@
 				C7559C6A2D040F0A00DF5907 /* Info.plist */,
 			);
 			path = AssignmentSwiggy;
+			sourceTree = "<group>";
+		};
+		C75770372D04538500CDBBDC /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				C757703C2D04540000CDBBDC /* CollectionView */,
+				C75770382D0453BC00CDBBDC /* flatDiscountCell.swift */,
+				C75770392D0453BC00CDBBDC /* flatDiscountCell.xib */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		C757703C2D04540000CDBBDC /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				C757703D2D04542800CDBBDC /* flatDiscountCVCell.swift */,
+				C757703E2D04542800CDBBDC /* flatDiscountCVCell.xib */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +177,10 @@
 				C7559C7A2D041D4800DF5907 /* StickyHeaderView.xib in Resources */,
 				C7559C692D040F0A00DF5907 /* LaunchScreen.storyboard in Resources */,
 				C7559C662D040F0A00DF5907 /* Assets.xcassets in Resources */,
+				C75770402D04542800CDBBDC /* flatDiscountCVCell.xib in Resources */,
 				C7559C642D040F0900DF5907 /* Main.storyboard in Resources */,
 				C75770342D04320100CDBBDC /* flatOffCVCell.xib in Resources */,
+				C757703B2D0453BC00CDBBDC /* flatDiscountCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,11 +191,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C757703A2D0453BC00CDBBDC /* flatDiscountCell.swift in Sources */,
 				C7559C782D041CB800DF5907 /* StickyHeaderView.swift in Sources */,
 				C7559C612D040F0900DF5907 /* MainViewController.swift in Sources */,
 				C75770362D0444CF00CDBBDC /* EstimateItemStatus.swift in Sources */,
 				C7559C5D2D040F0900DF5907 /* AppDelegate.swift in Sources */,
 				C75770332D04320100CDBBDC /* flatOffCVCell.swift in Sources */,
+				C757703F2D04542800CDBBDC /* flatDiscountCVCell.swift in Sources */,
 				C75770302D042EBA00CDBBDC /* CustomView.swift in Sources */,
 				C7559C5F2D040F0900DF5907 /* SceneDelegate.swift in Sources */,
 				C7559C712D04106A00DF5907 /* DetailsViewController.swift in Sources */,

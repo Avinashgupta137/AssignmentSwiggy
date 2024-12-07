@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,38 +26,21 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-4b-c8C">
                                 <rect key="frame" x="0.0" y="195" width="393" height="657"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eON-s7-Sx8">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9zd-8Y-lbD">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="657"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gax-hu-f5k">
-                                            <size key="itemSize" width="384" height="153"/>
-                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        </collectionViewFlowLayout>
-                                        <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9pl-zR-185">
-                                                <rect key="frame" x="4.666666666666667" y="0.0" width="384" height="153"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MSm-Fa-YP4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="384" height="153"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                </collectionViewCellContentView>
-                                                <size key="customSize" width="384" height="153"/>
-                                            </collectionViewCell>
-                                        </cells>
                                         <connections>
-                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="0mT-ta-uHf"/>
-                                            <outlet property="delegate" destination="BYZ-38-t0r" id="rSR-Pm-ThU"/>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="iev-Au-tNF"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="jKs-ro-Hxj"/>
                                         </connections>
-                                    </collectionView>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="eON-s7-Sx8" secondAttribute="trailing" id="BsZ-IJ-4vf"/>
-                                    <constraint firstItem="eON-s7-Sx8" firstAttribute="leading" secondItem="uMQ-4b-c8C" secondAttribute="leading" id="CLv-oo-HaN"/>
-                                    <constraint firstAttribute="bottom" secondItem="eON-s7-Sx8" secondAttribute="bottom" id="CiF-XY-ZUb"/>
-                                    <constraint firstItem="eON-s7-Sx8" firstAttribute="top" secondItem="uMQ-4b-c8C" secondAttribute="top" id="fTc-dq-dlX"/>
+                                    <constraint firstItem="9zd-8Y-lbD" firstAttribute="leading" secondItem="uMQ-4b-c8C" secondAttribute="leading" id="0Na-Dn-Qg9"/>
+                                    <constraint firstAttribute="bottom" secondItem="9zd-8Y-lbD" secondAttribute="bottom" id="YTc-Mg-cEu"/>
+                                    <constraint firstItem="9zd-8Y-lbD" firstAttribute="top" secondItem="uMQ-4b-c8C" secondAttribute="top" id="cB5-Gs-C0p"/>
+                                    <constraint firstAttribute="trailing" secondItem="9zd-8Y-lbD" secondAttribute="trailing" id="sK7-Ps-NBr"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -80,7 +62,7 @@
                     <navigationItem key="navigationItem" id="uai-gH-PaY"/>
                     <connections>
                         <outlet property="headerView" destination="sz5-Qa-9rM" id="ZBm-i9-GCb"/>
-                        <outlet property="mailCollectionView" destination="eON-s7-Sx8" id="mSz-6H-OpE"/>
+                        <outlet property="tableView" destination="9zd-8Y-lbD" id="DDg-ah-8By"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

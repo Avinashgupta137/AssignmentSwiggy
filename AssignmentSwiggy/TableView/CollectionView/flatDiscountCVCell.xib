@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellCV" id="gTV-IL-0wX" customClass="flatDiscountCVCell" customModule="AssignmentSwiggy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="364" height="176"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="364" height="176"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OZX-6p-7PJ">
+                        <rect key="frame" x="0.0" y="0.0" width="364" height="176"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flatdiscount" translatesAutoresizingMaskIntoConstraints="NO" id="RY4-A3-jVg">
+                                <rect key="frame" x="0.0" y="0.0" width="364" height="176"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="RY4-A3-jVg" secondAttribute="trailing" id="NxR-xT-jSt"/>
+                            <constraint firstAttribute="bottom" secondItem="RY4-A3-jVg" secondAttribute="bottom" id="ScH-DA-ZK5"/>
+                            <constraint firstItem="RY4-A3-jVg" firstAttribute="top" secondItem="OZX-6p-7PJ" secondAttribute="top" id="Tx3-Nx-ywh"/>
+                            <constraint firstItem="RY4-A3-jVg" firstAttribute="leading" secondItem="OZX-6p-7PJ" secondAttribute="leading" id="dVI-Ac-e8l"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="OZX-6p-7PJ" secondAttribute="trailing" id="5KA-i7-XVL"/>
+                <constraint firstAttribute="bottom" secondItem="OZX-6p-7PJ" secondAttribute="bottom" id="5Z9-Kb-wkL"/>
+                <constraint firstItem="OZX-6p-7PJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7mg-Tc-DCn"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="OZX-6p-7PJ" secondAttribute="trailing" id="99I-Ry-j5y"/>
+                <constraint firstItem="OZX-6p-7PJ" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="Pxh-2Q-aNn"/>
+                <constraint firstItem="OZX-6p-7PJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="seE-So-0y6"/>
+            </constraints>
+            <size key="customSize" width="364" height="176"/>
+            <connections>
+                <outlet property="imgCellCV" destination="RY4-A3-jVg" id="d7t-9k-Ypc"/>
+            </connections>
+            <point key="canvasLocation" x="276.3358778625954" y="33.098591549295776"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="flatdiscount" width="104.66666412353516" height="53.666667938232422"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
