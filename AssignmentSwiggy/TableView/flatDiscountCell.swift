@@ -12,6 +12,8 @@ class flatDiscountCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        collectionView.delegate = self
+        collectionView.dataSource = self
         collectionView.register(UINib.init(nibName: "flatDiscountCVCell", bundle: nil), forCellWithReuseIdentifier: "cellCV")
     }
 
