@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="gTV-IL-0wX" customClass="flatOffCVCell" customModule="AssignmentSwiggy" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="252" height="119"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="252" height="119"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3OM-Fz-xI3">
+                        <rect key="frame" x="0.0" y="0.0" width="252" height="119"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flatdiscount" translatesAutoresizingMaskIntoConstraints="NO" id="hY7-fy-WyJ">
+                                <rect key="frame" x="0.0" y="0.0" width="252" height="119"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hY7-fy-WyJ" firstAttribute="top" secondItem="3OM-Fz-xI3" secondAttribute="top" id="8iH-nY-jsQ"/>
+                            <constraint firstItem="hY7-fy-WyJ" firstAttribute="leading" secondItem="3OM-Fz-xI3" secondAttribute="leading" id="9tw-4u-3tZ"/>
+                            <constraint firstAttribute="trailing" secondItem="hY7-fy-WyJ" secondAttribute="trailing" id="KCu-DC-HDp"/>
+                            <constraint firstAttribute="bottom" secondItem="hY7-fy-WyJ" secondAttribute="bottom" id="RhV-Bl-bKc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="3OM-Fz-xI3" secondAttribute="trailing" id="5KO-bf-bJx"/>
+                <constraint firstItem="3OM-Fz-xI3" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="R87-EE-Js3"/>
+                <constraint firstAttribute="bottom" secondItem="3OM-Fz-xI3" secondAttribute="bottom" id="r9U-Dc-wQR"/>
+                <constraint firstItem="3OM-Fz-xI3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="vyW-g3-GC5"/>
+            </constraints>
+            <size key="customSize" width="252" height="119"/>
+            <connections>
+                <outlet property="imgFlatOff" destination="hY7-fy-WyJ" id="UGd-BG-0BZ"/>
+            </connections>
+            <point key="canvasLocation" x="283.96946564885496" y="13.028169014084508"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="flatdiscount" width="104.66666412353516" height="53.666667938232422"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

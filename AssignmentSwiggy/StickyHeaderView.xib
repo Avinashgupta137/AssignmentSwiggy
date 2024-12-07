@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StickyHeaderView" customModule="AssignmentSwiggy" customModuleProvider="target">
+            <connections>
+                <outlet property="HeaderView" destination="iN0-l3-epB" id="A3X-m1-cpS"/>
+                <outlet property="btnLocation" destination="xvv-CY-7Vk" id="rTx-OR-P9J"/>
+                <outlet property="imgProfile" destination="pWp-na-N8r" id="pWz-ex-Qv3"/>
+                <outlet property="lblLocation" destination="BlX-sL-dpp" id="LV3-JY-fa2"/>
+                <outlet property="searchBar" destination="3yS-fS-47I" id="Wyn-7S-ute"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="664" height="208"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLK-Bl-PCA">
+                    <rect key="frame" x="10" y="0.0" width="644" height="60"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="dNI-Xc-Byp">
+                            <rect key="frame" x="0.0" y="0.0" width="644" height="60"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="3Vb-Se-naf">
+                                    <rect key="frame" x="0.0" y="0.0" width="548" height="54.666666666666664"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvv-CY-7Vk">
+                                            <rect key="frame" x="0.0" y="0.0" width="95.666666666666671" height="34.333333333333336"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="location.fill" catalog="system" title="Office"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Block 1st floor swiggy Embasssy Tech" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BlX-sL-dpp">
+                                            <rect key="frame" x="0.0" y="34.333333333333336" width="287" height="20.333333333333336"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pWp-na-N8r">
+                                    <rect key="frame" x="584" y="1" width="60" height="58.666666666666671"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="MN3-P3-u8d"/>
+                                        <constraint firstAttribute="width" constant="60" id="PwY-Yc-GJs"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="pWp-na-N8r" firstAttribute="top" secondItem="dNI-Xc-Byp" secondAttribute="top" id="NAa-yz-ZIm"/>
+                                <constraint firstAttribute="bottom" secondItem="pWp-na-N8r" secondAttribute="bottom" id="TBg-om-3pM"/>
+                                <constraint firstAttribute="trailing" secondItem="pWp-na-N8r" secondAttribute="trailing" id="gPi-Mg-ERk"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="dNI-Xc-Byp" firstAttribute="leading" secondItem="OLK-Bl-PCA" secondAttribute="leading" id="1fG-DI-L6a"/>
+                        <constraint firstAttribute="bottom" secondItem="dNI-Xc-Byp" secondAttribute="bottom" id="2Tc-I6-85T"/>
+                        <constraint firstItem="dNI-Xc-Byp" firstAttribute="top" secondItem="OLK-Bl-PCA" secondAttribute="top" id="FTd-h6-SuR"/>
+                        <constraint firstAttribute="trailing" secondItem="dNI-Xc-Byp" secondAttribute="trailing" id="a25-P9-FHN"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yoO-OA-N33" customClass="CustomView" customModule="AssignmentSwiggy" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="70" width="664" height="94"/>
+                    <subviews>
+                        <searchBar contentMode="redraw" placeholder="Search" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3yS-fS-47I">
+                            <rect key="frame" x="0.0" y="0.0" width="674" height="94"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <scopeButtonTitles>
+                                <string>Title</string>
+                                <string>Title</string>
+                            </scopeButtonTitles>
+                        </searchBar>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="3yS-fS-47I" secondAttribute="trailing" id="642-Qj-BRA"/>
+                        <constraint firstItem="3yS-fS-47I" firstAttribute="leading" secondItem="yoO-OA-N33" secondAttribute="leading" id="88m-jH-px2"/>
+                        <constraint firstItem="3yS-fS-47I" firstAttribute="top" secondItem="yoO-OA-N33" secondAttribute="top" id="99o-WI-Qf0"/>
+                        <constraint firstAttribute="bottom" secondItem="3yS-fS-47I" secondAttribute="bottom" id="M2B-m6-9OC"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="OLK-Bl-PCA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="33M-BH-EfC"/>
+                <constraint firstItem="yoO-OA-N33" firstAttribute="top" secondItem="OLK-Bl-PCA" secondAttribute="bottom" constant="10" id="FSB-d3-vAX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yoO-OA-N33" secondAttribute="trailing" id="LOy-gN-O4Z"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="yoO-OA-N33" secondAttribute="bottom" constant="10" id="fjA-HI-31z"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OLK-Bl-PCA" secondAttribute="trailing" constant="10" id="gg2-aI-9J9"/>
+                <constraint firstItem="yoO-OA-N33" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jUa-JI-CVN"/>
+                <constraint firstItem="OLK-Bl-PCA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="kNw-g5-H4e"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="320.61068702290078" y="-238.02816901408451"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="location.fill" catalog="system" width="128" height="119"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
