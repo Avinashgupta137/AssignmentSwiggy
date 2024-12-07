@@ -30,6 +30,7 @@ class MainViewController: UIViewController {
         headerView.searchBar.delegate = self
     }
     func uiUpdate() {
+        tableView.register(UINib(nibName: "FoodWeekTVCell", bundle: nil), forCellReuseIdentifier: "cellTVfood")
         tableView.register(UINib(nibName: "flatDiscountCell", bundle: nil), forCellReuseIdentifier: "cellTV")
     }
     
@@ -48,7 +49,9 @@ extension MainViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch EstimateItemStatus.allCases[section] {
         case .flateOff:
-            return 1//EstimateItemStatus.allCases[section].displayPromotionData().count
+            return 1
+        case .foodweek:
+            return 1
         }
     }
     
@@ -58,7 +61,12 @@ extension MainViewController : UITableViewDelegate , UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellTV", for: indexPath) as? flatDiscountCell else {
                 return UITableViewCell()
             }
-            let data = EstimateItemStatus.allCases[indexPath.section].displayPromotionData()[indexPath.item]
+    
+            return cell
+        case .foodweek:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellTVfood", for: indexPath) as? FoodWeekTVCell else {
+                return UITableViewCell()
+            }
             return cell
         }
     }
@@ -68,6 +76,8 @@ extension MainViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             switch EstimateItemStatus.allCases[indexPath.section] {
             case .flateOff:
+                return 190
+            case .foodweek:
                 return 190
             }
         }

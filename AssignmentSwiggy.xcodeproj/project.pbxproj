@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		686A4B892D04A5BC00D4D5BD /* FoodWeekTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 686A4B882D04A5BC00D4D5BD /* FoodWeekTVCell.xib */; };
+		686A4B8A2D04A5BC00D4D5BD /* FoodWeekTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686A4B872D04A5BC00D4D5BD /* FoodWeekTVCell.swift */; };
+		686A4B8D2D04A65400D4D5BD /* FoodWeekCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 686A4B8C2D04A65400D4D5BD /* FoodWeekCollectionViewCell.xib */; };
+		686A4B8E2D04A65400D4D5BD /* FoodWeekCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686A4B8B2D04A65400D4D5BD /* FoodWeekCollectionViewCell.swift */; };
 		C7559C5D2D040F0900DF5907 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7559C5C2D040F0900DF5907 /* AppDelegate.swift */; };
 		C7559C5F2D040F0900DF5907 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7559C5E2D040F0900DF5907 /* SceneDelegate.swift */; };
 		C7559C612D040F0900DF5907 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7559C602D040F0900DF5907 /* MainViewController.swift */; };
@@ -27,6 +31,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		686A4B872D04A5BC00D4D5BD /* FoodWeekTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodWeekTVCell.swift; sourceTree = "<group>"; };
+		686A4B882D04A5BC00D4D5BD /* FoodWeekTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodWeekTVCell.xib; sourceTree = "<group>"; };
+		686A4B8B2D04A65400D4D5BD /* FoodWeekCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodWeekCollectionViewCell.swift; sourceTree = "<group>"; };
+		686A4B8C2D04A65400D4D5BD /* FoodWeekCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodWeekCollectionViewCell.xib; sourceTree = "<group>"; };
 		C7559C592D040F0900DF5907 /* AssignmentSwiggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentSwiggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7559C5C2D040F0900DF5907 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7559C5E2D040F0900DF5907 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +67,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		686A4B842D04A54900D4D5BD /* FoodWeekend */ = {
+			isa = PBXGroup;
+			children = (
+				686A4B872D04A5BC00D4D5BD /* FoodWeekTVCell.swift */,
+				686A4B882D04A5BC00D4D5BD /* FoodWeekTVCell.xib */,
+				686A4B8B2D04A65400D4D5BD /* FoodWeekCollectionViewCell.swift */,
+				686A4B8C2D04A65400D4D5BD /* FoodWeekCollectionViewCell.xib */,
+			);
+			path = FoodWeekend;
+			sourceTree = "<group>";
+		};
 		C7559C502D040F0900DF5907 = {
 			isa = PBXGroup;
 			children = (
@@ -81,7 +100,7 @@
 				C7559C5C2D040F0900DF5907 /* AppDelegate.swift */,
 				C7559C5E2D040F0900DF5907 /* SceneDelegate.swift */,
 				C7559C602D040F0900DF5907 /* MainViewController.swift */,
-				C75770372D04538500CDBBDC /* TableView */,
+				C75770372D04538500CDBBDC /* BannerTableView */,
 				C7559C702D04106A00DF5907 /* DetailsViewController.swift */,
 				C7559C772D041CB700DF5907 /* StickyHeaderView.swift */,
 				C757702F2D042EBA00CDBBDC /* CustomView.swift */,
@@ -97,19 +116,20 @@
 			path = AssignmentSwiggy;
 			sourceTree = "<group>";
 		};
-		C75770372D04538500CDBBDC /* TableView */ = {
+		C75770372D04538500CDBBDC /* BannerTableView */ = {
 			isa = PBXGroup;
 			children = (
+				686A4B842D04A54900D4D5BD /* FoodWeekend */,
 				C757703C2D04540000CDBBDC /* CollectionView */,
-				C75770382D0453BC00CDBBDC /* flatDiscountCell.swift */,
-				C75770392D0453BC00CDBBDC /* flatDiscountCell.xib */,
 			);
-			path = TableView;
+			path = BannerTableView;
 			sourceTree = "<group>";
 		};
 		C757703C2D04540000CDBBDC /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				C75770382D0453BC00CDBBDC /* flatDiscountCell.swift */,
+				C75770392D0453BC00CDBBDC /* flatDiscountCell.xib */,
 				C757703D2D04542800CDBBDC /* flatDiscountCVCell.swift */,
 				C757703E2D04542800CDBBDC /* flatDiscountCVCell.xib */,
 			);
@@ -174,7 +194,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				686A4B8D2D04A65400D4D5BD /* FoodWeekCollectionViewCell.xib in Resources */,
 				C7559C7A2D041D4800DF5907 /* StickyHeaderView.xib in Resources */,
+				686A4B892D04A5BC00D4D5BD /* FoodWeekTVCell.xib in Resources */,
 				C7559C692D040F0A00DF5907 /* LaunchScreen.storyboard in Resources */,
 				C7559C662D040F0A00DF5907 /* Assets.xcassets in Resources */,
 				C75770402D04542800CDBBDC /* flatDiscountCVCell.xib in Resources */,
@@ -195,12 +217,14 @@
 				C7559C782D041CB800DF5907 /* StickyHeaderView.swift in Sources */,
 				C7559C612D040F0900DF5907 /* MainViewController.swift in Sources */,
 				C75770362D0444CF00CDBBDC /* EstimateItemStatus.swift in Sources */,
+				686A4B8E2D04A65400D4D5BD /* FoodWeekCollectionViewCell.swift in Sources */,
 				C7559C5D2D040F0900DF5907 /* AppDelegate.swift in Sources */,
 				C75770332D04320100CDBBDC /* flatOffCVCell.swift in Sources */,
 				C757703F2D04542800CDBBDC /* flatDiscountCVCell.swift in Sources */,
 				C75770302D042EBA00CDBBDC /* CustomView.swift in Sources */,
 				C7559C5F2D040F0900DF5907 /* SceneDelegate.swift in Sources */,
 				C7559C712D04106A00DF5907 /* DetailsViewController.swift in Sources */,
+				686A4B8A2D04A5BC00D4D5BD /* FoodWeekTVCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,7 +376,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 37ARB3LA9Z;
+				DEVELOPMENT_TEAM = 64L94BA337;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AssignmentSwiggy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -365,7 +389,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftUIdem.AssignmentSwiggy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.avinashg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -380,7 +404,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 37ARB3LA9Z;
+				DEVELOPMENT_TEAM = 64L94BA337;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AssignmentSwiggy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -393,7 +417,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.SwiftUIdem.AssignmentSwiggy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.avinashg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

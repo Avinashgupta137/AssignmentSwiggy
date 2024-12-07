@@ -32,7 +32,7 @@ class flatDiscountCell: UITableViewCell {
     }
     
     deinit {
-        stopAutoScroll() // Ensure the timer is invalidated when the cell is deallocated
+        stopAutoScroll()
     }
     
     @objc private func pageControlTapped(_ sender: UIPageControl) {
@@ -78,15 +78,13 @@ class flatDiscountCell: UITableViewCell {
 //MARK: CollectionView
 extension flatDiscountCell: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout , UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        switch EstimateItemStatus.allCases[indexPath.section] {
-        case .flateOff:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellCV", for: indexPath) as? flatDiscountCVCell else {
                 return UICollectionViewCell()
             }
             let data = EstimateItemStatus.allCases[indexPath.section].displayPromotionData()[indexPath.item]
             cell.displayPromotionData(data)
+        
             return cell
-        }
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -94,10 +92,7 @@ extension flatDiscountCell: UICollectionViewDataSource, UICollectionViewDelegate
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        switch EstimateItemStatus.allCases[section] {
-        case .flateOff:
-            return EstimateItemStatus.allCases[section].displayPromotionData().count
-        }
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
