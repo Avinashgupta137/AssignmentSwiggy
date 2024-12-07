@@ -53,3 +53,67 @@ class CustomView: UIView {
         }
     }
 }
+import UIKit
+
+@IBDesignable
+class InspectableImageView: UIImageView {
+    
+    // MARK: - Inspectable Properties
+    
+    /// Border color of the image view
+    @IBInspectable var borderColor: UIColor = .clear {
+        didSet {
+            layer.borderColor = borderColor.cgColor
+        }
+    }
+    
+    /// Border width of the image view
+    @IBInspectable var borderWidth: CGFloat = 0.0 {
+        didSet {
+            layer.borderWidth = borderWidth
+        }
+    }
+    
+    /// Corner radius of the image view
+    @IBInspectable var cornerRadius: CGFloat = 0.0 {
+        didSet {
+            layer.cornerRadius = cornerRadius
+            layer.masksToBounds = cornerRadius > 0
+        }
+    }
+    
+    /// Shadow color of the image view
+    @IBInspectable var shadowColor: UIColor = .clear {
+        didSet {
+            layer.shadowColor = shadowColor.cgColor
+        }
+    }
+    
+    /// Shadow opacity of the image view
+    @IBInspectable var shadowOpacity: Float = 0.0 {
+        didSet {
+            layer.shadowOpacity = shadowOpacity
+        }
+    }
+    
+    /// Shadow offset of the image view
+    @IBInspectable var shadowOffset: CGSize = .zero {
+        didSet {
+            layer.shadowOffset = shadowOffset
+        }
+    }
+    
+    /// Shadow radius of the image view
+    @IBInspectable var shadowRadius: CGFloat = 0.0 {
+        didSet {
+            layer.shadowRadius = shadowRadius
+        }
+    }
+    
+    /// Enable/Disable aspect fit for the image view
+    @IBInspectable var isAspectFit: Bool = true {
+        didSet {
+            contentMode = isAspectFit ? .scaleAspectFit : .scaleAspectFill
+        }
+    }
+}

@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="fxq-uT-zsK">
-                        <rect key="frame" x="0.0" y="0.0" width="455" height="183"/>
+                        <rect key="frame" x="0.0" y="0.0" width="455" height="188"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OZ6-OD-bJ0">
                             <size key="itemSize" width="128" height="128"/>
@@ -28,9 +28,9 @@
                         </collectionViewFlowLayout>
                     </collectionView>
                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="3xh-AF-ASh">
-                        <rect key="frame" x="169.66666666666666" y="183" width="115.99999999999997" height="25"/>
+                        <rect key="frame" x="169.66666666666666" y="188" width="115.99999999999997" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="25" id="oGJ-gB-bs0"/>
+                            <constraint firstAttribute="height" constant="20" id="oGJ-gB-bs0"/>
                         </constraints>
                         <color key="pageIndicatorTintColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

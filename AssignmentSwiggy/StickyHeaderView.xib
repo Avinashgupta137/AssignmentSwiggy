@@ -103,7 +103,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AOV-RZ-7Ep" customClass="CustomView" customModule="AssignmentSwiggy" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="115" width="684" height="150"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flatdiscount2" translatesAutoresizingMaskIntoConstraints="NO" id="AhH-eX-j2U">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flatdiscount3" translatesAutoresizingMaskIntoConstraints="NO" id="AhH-eX-j2U">
                             <rect key="frame" x="0.0" y="0.0" width="684" height="150"/>
                         </imageView>
                     </subviews>
@@ -136,7 +136,7 @@
         </view>
     </objects>
     <resources>
-        <image name="flatdiscount2" width="426.66665649414062" height="209.33332824707031"/>
+        <image name="flatdiscount3" width="103.33333587646484" height="54.333332061767578"/>
         <image name="location.fill" catalog="system" width="128" height="119"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">

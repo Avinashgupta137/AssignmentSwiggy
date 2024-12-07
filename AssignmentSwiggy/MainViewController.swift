@@ -59,7 +59,6 @@ extension MainViewController : UITableViewDelegate , UITableViewDataSource {
                 return UITableViewCell()
             }
             let data = EstimateItemStatus.allCases[indexPath.section].displayPromotionData()[indexPath.item]
-            //  cell.displayPromotionData(data)
             return cell
         }
     }
@@ -69,7 +68,7 @@ extension MainViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             switch EstimateItemStatus.allCases[indexPath.section] {
             case .flateOff:
-                return 250 
+                return 190
             }
         }
 }

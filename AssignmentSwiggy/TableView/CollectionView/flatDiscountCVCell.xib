@@ -17,31 +17,59 @@
                 <rect key="frame" x="0.0" y="0.0" width="364" height="176"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OZX-6p-7PJ">
-                        <rect key="frame" x="0.0" y="0.0" width="364" height="176"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OZX-6p-7PJ" customClass="CustomView" customModule="AssignmentSwiggy" customModuleProvider="target">
+                        <rect key="frame" x="10" y="10" width="344" height="156"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flatdiscount" translatesAutoresizingMaskIntoConstraints="NO" id="RY4-A3-jVg">
-                                <rect key="frame" x="0.0" y="0.0" width="364" height="176"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flatdiscount" translatesAutoresizingMaskIntoConstraints="NO" id="RY4-A3-jVg" customClass="InspectableImageView" customModule="AssignmentSwiggy" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="344" height="156"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="RY4-A3-jVg" secondAttribute="trailing" id="NxR-xT-jSt"/>
-                            <constraint firstAttribute="bottom" secondItem="RY4-A3-jVg" secondAttribute="bottom" id="ScH-DA-ZK5"/>
-                            <constraint firstItem="RY4-A3-jVg" firstAttribute="top" secondItem="OZX-6p-7PJ" secondAttribute="top" id="Tx3-Nx-ywh"/>
-                            <constraint firstItem="RY4-A3-jVg" firstAttribute="leading" secondItem="OZX-6p-7PJ" secondAttribute="leading" id="dVI-Ac-e8l"/>
+                            <constraint firstAttribute="trailing" secondItem="RY4-A3-jVg" secondAttribute="trailing" id="Dm3-6h-QfS"/>
+                            <constraint firstItem="RY4-A3-jVg" firstAttribute="leading" secondItem="OZX-6p-7PJ" secondAttribute="leading" id="Ifg-24-dWd"/>
+                            <constraint firstItem="RY4-A3-jVg" firstAttribute="top" secondItem="OZX-6p-7PJ" secondAttribute="top" id="Niz-Fi-VLw"/>
+                            <constraint firstAttribute="bottom" secondItem="RY4-A3-jVg" secondAttribute="bottom" id="pj3-sb-Zsc"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="OZX-6p-7PJ" secondAttribute="trailing" id="5KA-i7-XVL"/>
-                <constraint firstAttribute="bottom" secondItem="OZX-6p-7PJ" secondAttribute="bottom" id="5Z9-Kb-wkL"/>
-                <constraint firstItem="OZX-6p-7PJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7mg-Tc-DCn"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="OZX-6p-7PJ" secondAttribute="trailing" id="99I-Ry-j5y"/>
-                <constraint firstItem="OZX-6p-7PJ" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="Pxh-2Q-aNn"/>
-                <constraint firstItem="OZX-6p-7PJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="seE-So-0y6"/>
+                <constraint firstAttribute="trailing" secondItem="OZX-6p-7PJ" secondAttribute="trailing" constant="10" id="5KA-i7-XVL"/>
+                <constraint firstAttribute="bottom" secondItem="OZX-6p-7PJ" secondAttribute="bottom" constant="10" id="5Z9-Kb-wkL"/>
+                <constraint firstItem="OZX-6p-7PJ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="7mg-Tc-DCn"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="OZX-6p-7PJ" secondAttribute="trailing" constant="10" id="E22-Us-H0O"/>
+                <constraint firstItem="OZX-6p-7PJ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="seE-So-0y6"/>
+                <constraint firstItem="OZX-6p-7PJ" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="10" id="zXn-Hh-93J"/>
             </constraints>
             <size key="customSize" width="364" height="176"/>
             <connections>
