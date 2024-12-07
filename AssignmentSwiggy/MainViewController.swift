@@ -44,27 +44,25 @@ extension MainViewController: UISearchBarDelegate {
 }
 
 //MARK: - TAbleVIew
-
 extension MainViewController : UITableViewDelegate , UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch EstimateItemStatus.allCases[section] {
-        case .flateOff:
-            return 1
         case .foodweek:
+            return 1
+        case .flateOff:
             return 1
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch EstimateItemStatus.allCases[indexPath.section] {
-        case .flateOff:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellTV", for: indexPath) as? flatDiscountCell else {
-                return UITableViewCell()
-            }
-    
-            return cell
         case .foodweek:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellTVfood", for: indexPath) as? FoodWeekTVCell else {
+                return UITableViewCell()
+            }
+            return cell
+        case .flateOff:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellTV", for: indexPath) as? flatDiscountCell else {
                 return UITableViewCell()
             }
             return cell
@@ -75,9 +73,9 @@ extension MainViewController : UITableViewDelegate , UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             switch EstimateItemStatus.allCases[indexPath.section] {
-            case .flateOff:
-                return 190
             case .foodweek:
+                return 190
+            case .flateOff:
                 return 190
             }
         }
