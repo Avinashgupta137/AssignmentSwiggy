@@ -35,5 +35,13 @@ let displayRestro = [Restro(image: UIImage(named: "flatdiscount2"))]
 
 struct PromotionData {
     let image: UIImage?
+    let title: String?
+    let desc: String?
 }
-let promotionDisplayData = [PromotionData(image: UIImage(named: "flatdiscount2")), PromotionData(image: UIImage(named: "flatdiscount")), PromotionData(image: UIImage(named: "flatdiscount2"))]
+
+
+let promotionDisplayData = [
+    PromotionData(image: UIImage(named: "flatdiscount2"), title: "Flat Discount 1", desc: "Get amazing discounts on your first purchase."),
+    PromotionData(image: UIImage(named: "flatdiscount"), title: "Flat Discount 2", desc: "Special offers for premium customers."),
+    PromotionData(image: UIImage(named: "flatdiscount2"), title: "Flat Discount 3", desc: "Hurry up! Limited time discounts.")
+]

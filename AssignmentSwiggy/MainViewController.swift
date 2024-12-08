@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITextFieldDelegate {
+class MainViewController: UIViewController, UITextFieldDelegate, FlatDiscountCellDelegate {
     
     @IBOutlet weak var headerView: StickyHeaderView!
     @IBOutlet weak var tableView: UITableView!
@@ -97,6 +97,7 @@ extension MainViewController : UITableViewDelegate , UITableViewDataSource, UISc
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellTV", for: indexPath) as? flatDiscountCell else {
                 return UITableViewCell()
             }
+            cell.delegate = self
             return cell
         case .dishes:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "DishesTVC", for: indexPath) as? DishesTVC else {
@@ -136,5 +137,14 @@ extension MainViewController : UITableViewDelegate , UITableViewDataSource, UISc
 
         previousScrollOffset = offset
     }
+    func flatDiscountCell(_ cell: flatDiscountCell, didSelectItemWith data: PromotionData) {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            guard let detailsVC = storyboard.instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController else {
+                print("DetailsViewController could not be instantiated")
+                return
+            }
+            detailsVC.data = data
+            navigationController?.pushViewController(detailsVC, animated: true)
+        }
 }
 

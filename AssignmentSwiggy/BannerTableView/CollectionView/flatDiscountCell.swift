@@ -7,11 +7,20 @@
 
 import UIKit
 
+
+protocol FlatDiscountCellDelegate: AnyObject {
+    func flatDiscountCell(_ cell: flatDiscountCell, didSelectItemWith data: PromotionData)
+}
+
+
+
 class flatDiscountCell: UITableViewCell {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var imgPaging: UIPageControl!
     
+    weak var delegate: FlatDiscountCellDelegate?
+
     var imageData: [String] = [] {
         didSet {
             imgPaging.numberOfPages = imageData.count
@@ -98,6 +107,8 @@ extension flatDiscountCell: UICollectionViewDataSource, UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // Handle item selection if needed
         print("Selected item at section \(indexPath.section), row \(indexPath.row)")
+        let selectedData = EstimateItemStatus.allCases[indexPath.section].displayPromotionData()[indexPath.item]
+            delegate?.flatDiscountCell(self, didSelectItemWith: selectedData)
     }
     
     // MARK: - FlowLayout for Full-Width Cells
