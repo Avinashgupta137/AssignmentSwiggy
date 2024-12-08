@@ -14,6 +14,8 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var headerHeight: NSLayoutConstraint!
     
     let refreshControl = UIRefreshControl()
+    var previousScrollOffset: CGFloat = 0
+    private var isHeaderVisible: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,21 +37,51 @@ class MainViewController: UIViewController, UITextFieldDelegate {
         refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
         tableView.register(UINib(nibName: "FoodWeekTVCell", bundle: nil), forCellReuseIdentifier: "cellTVfood")
         tableView.register(UINib(nibName: "flatDiscountCell", bundle: nil), forCellReuseIdentifier: "cellTV")
+        tableView.register(UINib(nibName: "RestaurantsTVC", bundle: nil), forCellReuseIdentifier: "RestaurantsTVC")
+        tableView.register(UINib(nibName: "DishesTVC", bundle: nil), forCellReuseIdentifier: "DishesTVC")
     }
     @objc func refreshData(){
         tableView.reloadData()
         refreshControl.endRefreshing()
     }
+
+    func hideHeaderView() {
+        guard isHeaderVisible else { return }
+        isHeaderVisible = false
+
+        UIView.animate(withDuration: 0.3, animations: {
+            self.headerView.isHidden = true
+            self.headerHeight.constant = 0
+            self.headerView.alpha = 0.0
+            self.view.layoutIfNeeded()
+        })
+    }
+
+    func showHeaderView() {
+        guard !isHeaderVisible else { return }
+        isHeaderVisible = true
+
+        UIView.animate(withDuration: 0.3, animations: {
+            self.headerView.isHidden = false
+            self.headerHeight.constant = 100
+            self.headerView.alpha = 1.0
+            self.view.layoutIfNeeded()
+        })
+    }
 }
 
 //MARK: - TAbleVIew
-extension MainViewController : UITableViewDelegate , UITableViewDataSource {
+extension MainViewController : UITableViewDelegate , UITableViewDataSource, UIScrollViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch EstimateItemStatus.allCases[section] {
         case .foodweek:
             return 1
         case .flateOff:
             return 1
+        case .dishes:
+            return 1
+        case .restro:
+            return 10
         }
     }
     
@@ -65,6 +97,16 @@ extension MainViewController : UITableViewDelegate , UITableViewDataSource {
                 return UITableViewCell()
             }
             return cell
+        case .dishes:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "DishesTVC", for: indexPath) as? DishesTVC else {
+                return UITableViewCell()
+            }
+            return cell
+        case .restro:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantsTVC", for: indexPath) as? RestaurantsTVC else {
+                return UITableViewCell()
+            }
+            return cell
         }
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -76,7 +118,22 @@ extension MainViewController : UITableViewDelegate , UITableViewDataSource {
                 return 190
             case .flateOff:
                 return 190
+            case .dishes:
+                return 350
+            default:
+                return 190
             }
         }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offset = scrollView.contentOffset.y
+        if offset > previousScrollOffset && offset > 0 {
+            hideHeaderView()
+        }
+        else if offset < previousScrollOffset {
+            showHeaderView()
+        }
+
+        previousScrollOffset = offset
+    }
 }
 

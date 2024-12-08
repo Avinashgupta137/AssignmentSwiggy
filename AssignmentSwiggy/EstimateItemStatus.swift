@@ -11,7 +11,8 @@ import UIKit.UIImageView
 enum EstimateItemStatus: CaseIterable {
     case foodweek
     case flateOff
-    
+    case dishes
+    case restro
     
     func displayFoodWeek() -> [FoodWeek] {
         return displayDisFoodWeek
@@ -26,7 +27,10 @@ struct FoodWeek {
     let image: UIImage?
 }
 let displayDisFoodWeek = [FoodWeek(image: UIImage(named: "flatdiscount2"))]
-
+struct Restro {
+    let image: UIImage?
+}
+let displayRestro = [Restro(image: UIImage(named: "flatdiscount2"))]
 
 
 struct PromotionData {

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E9994722D053F5E0042A69C /* RestaurantsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9994702D053F5E0042A69C /* RestaurantsTVC.swift */; };
+		3E9994732D053F5E0042A69C /* RestaurantsTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E9994712D053F5E0042A69C /* RestaurantsTVC.xib */; };
+		3E9994782D0547A00042A69C /* DishesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9994762D0547A00042A69C /* DishesTVC.swift */; };
+		3E9994792D0547A00042A69C /* DishesTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E9994772D0547A00042A69C /* DishesTVC.xib */; };
+		3E99947C2D0549CD0042A69C /* DishesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E99947A2D0549CD0042A69C /* DishesCVC.swift */; };
+		3E99947D2D0549CD0042A69C /* DishesCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E99947B2D0549CD0042A69C /* DishesCVC.xib */; };
 		686A4B892D04A5BC00D4D5BD /* FoodWeekTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 686A4B882D04A5BC00D4D5BD /* FoodWeekTVCell.xib */; };
 		686A4B8A2D04A5BC00D4D5BD /* FoodWeekTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686A4B872D04A5BC00D4D5BD /* FoodWeekTVCell.swift */; };
 		686A4B8D2D04A65400D4D5BD /* FoodWeekCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 686A4B8C2D04A65400D4D5BD /* FoodWeekCollectionViewCell.xib */; };
@@ -31,6 +37,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E9994702D053F5E0042A69C /* RestaurantsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsTVC.swift; sourceTree = "<group>"; };
+		3E9994712D053F5E0042A69C /* RestaurantsTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantsTVC.xib; sourceTree = "<group>"; };
+		3E9994762D0547A00042A69C /* DishesTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesTVC.swift; sourceTree = "<group>"; };
+		3E9994772D0547A00042A69C /* DishesTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishesTVC.xib; sourceTree = "<group>"; };
+		3E99947A2D0549CD0042A69C /* DishesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesCVC.swift; sourceTree = "<group>"; };
+		3E99947B2D0549CD0042A69C /* DishesCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishesCVC.xib; sourceTree = "<group>"; };
 		686A4B872D04A5BC00D4D5BD /* FoodWeekTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodWeekTVCell.swift; sourceTree = "<group>"; };
 		686A4B882D04A5BC00D4D5BD /* FoodWeekTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodWeekTVCell.xib; sourceTree = "<group>"; };
 		686A4B8B2D04A65400D4D5BD /* FoodWeekCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodWeekCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -109,6 +121,12 @@
 				C7559C622D040F0900DF5907 /* Main.storyboard */,
 				C75770312D04320100CDBBDC /* flatOffCVCell.swift */,
 				C75770322D04320100CDBBDC /* flatOffCVCell.xib */,
+				3E9994702D053F5E0042A69C /* RestaurantsTVC.swift */,
+				3E9994712D053F5E0042A69C /* RestaurantsTVC.xib */,
+				3E9994762D0547A00042A69C /* DishesTVC.swift */,
+				3E9994772D0547A00042A69C /* DishesTVC.xib */,
+				3E99947A2D0549CD0042A69C /* DishesCVC.swift */,
+				3E99947B2D0549CD0042A69C /* DishesCVC.xib */,
 				C7559C652D040F0A00DF5907 /* Assets.xcassets */,
 				C7559C672D040F0A00DF5907 /* LaunchScreen.storyboard */,
 				C7559C6A2D040F0A00DF5907 /* Info.plist */,
@@ -201,7 +219,10 @@
 				C7559C662D040F0A00DF5907 /* Assets.xcassets in Resources */,
 				C75770402D04542800CDBBDC /* flatDiscountCVCell.xib in Resources */,
 				C7559C642D040F0900DF5907 /* Main.storyboard in Resources */,
+				3E9994792D0547A00042A69C /* DishesTVC.xib in Resources */,
 				C75770342D04320100CDBBDC /* flatOffCVCell.xib in Resources */,
+				3E9994732D053F5E0042A69C /* RestaurantsTVC.xib in Resources */,
+				3E99947D2D0549CD0042A69C /* DishesCVC.xib in Resources */,
 				C757703B2D0453BC00CDBBDC /* flatDiscountCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,10 +239,13 @@
 				C7559C612D040F0900DF5907 /* MainViewController.swift in Sources */,
 				C75770362D0444CF00CDBBDC /* EstimateItemStatus.swift in Sources */,
 				686A4B8E2D04A65400D4D5BD /* FoodWeekCollectionViewCell.swift in Sources */,
+				3E99947C2D0549CD0042A69C /* DishesCVC.swift in Sources */,
 				C7559C5D2D040F0900DF5907 /* AppDelegate.swift in Sources */,
 				C75770332D04320100CDBBDC /* flatOffCVCell.swift in Sources */,
+				3E9994782D0547A00042A69C /* DishesTVC.swift in Sources */,
 				C757703F2D04542800CDBBDC /* flatDiscountCVCell.swift in Sources */,
 				C75770302D042EBA00CDBBDC /* CustomView.swift in Sources */,
+				3E9994722D053F5E0042A69C /* RestaurantsTVC.swift in Sources */,
 				C7559C5F2D040F0900DF5907 /* SceneDelegate.swift in Sources */,
 				C7559C712D04106A00DF5907 /* DetailsViewController.swift in Sources */,
 				686A4B8A2D04A5BC00D4D5BD /* FoodWeekTVCell.swift in Sources */,
