@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Qm-FN-pds">
                         <rect key="frame" x="0.0" y="0.0" width="190" height="160"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screenshot 2024-12-08 at 9.00.59 AM" translatesAutoresizingMaskIntoConstraints="NO" id="qaY-NI-6hq">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="idli" translatesAutoresizingMaskIntoConstraints="NO" id="qaY-NI-6hq">
                                 <rect key="frame" x="55" y="40" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="PL7-uk-j8K"/>
@@ -56,7 +56,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Screenshot 2024-12-08 at 9.00.59 AM" width="622" height="590"/>
+        <image name="idli" width="622" height="590"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

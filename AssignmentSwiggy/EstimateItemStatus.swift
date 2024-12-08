@@ -41,7 +41,7 @@ struct PromotionData {
 
 
 let promotionDisplayData = [
-    PromotionData(image: UIImage(named: "flatdiscount2"), title: "Flat Discount 1", desc: "Get amazing discounts on your first purchase."),
-    PromotionData(image: UIImage(named: "flatdiscount"), title: "Flat Discount 2", desc: "Special offers for premium customers."),
-    PromotionData(image: UIImage(named: "flatdiscount2"), title: "Flat Discount 3", desc: "Hurry up! Limited time discounts.")
+    PromotionData(image: UIImage(named: "flatdiscount3"), title: "Flat Discount 1", desc: "Get amazing discounts on your first purchase."),
+    PromotionData(image: UIImage(named: "flatdiscount4"), title: "Flat Discount 2", desc: "Special offers for premium customers."),
+    PromotionData(image: UIImage(named: "flatdiscount5"), title: "Flat Discount 3", desc: "Hurry up! Limited time discounts.")
 ]

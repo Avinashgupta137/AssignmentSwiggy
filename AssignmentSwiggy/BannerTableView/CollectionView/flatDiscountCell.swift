@@ -97,11 +97,11 @@ extension flatDiscountCell: UICollectionViewDataSource, UICollectionViewDelegate
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return EstimateItemStatus.allCases.count
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return promotionDisplayData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
