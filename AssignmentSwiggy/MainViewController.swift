@@ -19,6 +19,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.bounces = true
         setupStickyHeader()
         uiUpdate()
     }
@@ -48,7 +49,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     func hideHeaderView() {
         guard isHeaderVisible else { return }
         isHeaderVisible = false
-
+        tableView.bounces = false
         UIView.animate(withDuration: 0.3, animations: {
             self.headerView.isHidden = true
             self.headerHeight.constant = 0
@@ -60,7 +61,7 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     func showHeaderView() {
         guard !isHeaderVisible else { return }
         isHeaderVisible = true
-
+        tableView.bounces = true
         UIView.animate(withDuration: 0.3, animations: {
             self.headerView.isHidden = false
             self.headerHeight.constant = 100
