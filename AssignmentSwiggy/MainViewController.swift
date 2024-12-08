@@ -40,6 +40,7 @@ class MainViewController: UIViewController, UITextFieldDelegate, FlatDiscountCel
         tableView.register(UINib(nibName: "flatDiscountCell", bundle: nil), forCellReuseIdentifier: "cellTV")
         tableView.register(UINib(nibName: "RestaurantsTVC", bundle: nil), forCellReuseIdentifier: "RestaurantsTVC")
         tableView.register(UINib(nibName: "DishesTVC", bundle: nil), forCellReuseIdentifier: "DishesTVC")
+        tableView.register(UINib(nibName: "FilterTVC", bundle: nil), forCellReuseIdentifier: "FilterTVC")
     }
     @objc func refreshData(){
         tableView.reloadData()
@@ -83,6 +84,8 @@ extension MainViewController : UITableViewDelegate , UITableViewDataSource, UISc
             return 1
         case .restro:
             return 10
+        case .filter:
+            return 1
         }
     }
     
@@ -109,6 +112,11 @@ extension MainViewController : UITableViewDelegate , UITableViewDataSource, UISc
                 return UITableViewCell()
             }
             return cell
+        case .filter:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "FilterTVC", for: indexPath) as? FilterTVC else {
+                return UITableViewCell()
+            }
+            return cell
         }
     }
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -122,6 +130,8 @@ extension MainViewController : UITableViewDelegate , UITableViewDataSource, UISc
                 return 190
             case .dishes:
                 return 350
+            case .filter:
+                return 50
             default:
                 return 190
             }

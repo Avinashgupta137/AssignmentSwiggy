@@ -17,6 +17,10 @@
 		686A4B8A2D04A5BC00D4D5BD /* FoodWeekTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686A4B872D04A5BC00D4D5BD /* FoodWeekTVCell.swift */; };
 		686A4B8D2D04A65400D4D5BD /* FoodWeekCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 686A4B8C2D04A65400D4D5BD /* FoodWeekCollectionViewCell.xib */; };
 		686A4B8E2D04A65400D4D5BD /* FoodWeekCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686A4B8B2D04A65400D4D5BD /* FoodWeekCollectionViewCell.swift */; };
+		686DB1722D05A8D000426C2C /* FilterCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 686DB1712D05A8D000426C2C /* FilterCVC.xib */; };
+		686DB1732D05A8D000426C2C /* FilterTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 686DB16F2D05A8D000426C2C /* FilterTVC.xib */; };
+		686DB1742D05A8D000426C2C /* FilterCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686DB1702D05A8D000426C2C /* FilterCVC.swift */; };
+		686DB1752D05A8D000426C2C /* FilterTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686DB16E2D05A8D000426C2C /* FilterTVC.swift */; };
 		C7559C5D2D040F0900DF5907 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7559C5C2D040F0900DF5907 /* AppDelegate.swift */; };
 		C7559C5F2D040F0900DF5907 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7559C5E2D040F0900DF5907 /* SceneDelegate.swift */; };
 		C7559C612D040F0900DF5907 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7559C602D040F0900DF5907 /* MainViewController.swift */; };
@@ -47,6 +51,10 @@
 		686A4B882D04A5BC00D4D5BD /* FoodWeekTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodWeekTVCell.xib; sourceTree = "<group>"; };
 		686A4B8B2D04A65400D4D5BD /* FoodWeekCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodWeekCollectionViewCell.swift; sourceTree = "<group>"; };
 		686A4B8C2D04A65400D4D5BD /* FoodWeekCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodWeekCollectionViewCell.xib; sourceTree = "<group>"; };
+		686DB16E2D05A8D000426C2C /* FilterTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTVC.swift; sourceTree = "<group>"; };
+		686DB16F2D05A8D000426C2C /* FilterTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterTVC.xib; sourceTree = "<group>"; };
+		686DB1702D05A8D000426C2C /* FilterCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCVC.swift; sourceTree = "<group>"; };
+		686DB1712D05A8D000426C2C /* FilterCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCVC.xib; sourceTree = "<group>"; };
 		C7559C592D040F0900DF5907 /* AssignmentSwiggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentSwiggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7559C5C2D040F0900DF5907 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7559C5E2D040F0900DF5907 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +127,10 @@
 				C75770352D0444CF00CDBBDC /* EstimateItemStatus.swift */,
 				C7559C792D041D4800DF5907 /* StickyHeaderView.xib */,
 				C7559C622D040F0900DF5907 /* Main.storyboard */,
+				686DB16E2D05A8D000426C2C /* FilterTVC.swift */,
+				686DB16F2D05A8D000426C2C /* FilterTVC.xib */,
+				686DB1702D05A8D000426C2C /* FilterCVC.swift */,
+				686DB1712D05A8D000426C2C /* FilterCVC.xib */,
 				C75770312D04320100CDBBDC /* flatOffCVCell.swift */,
 				C75770322D04320100CDBBDC /* flatOffCVCell.xib */,
 				3E9994702D053F5E0042A69C /* RestaurantsTVC.swift */,
@@ -212,6 +224,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				686DB1722D05A8D000426C2C /* FilterCVC.xib in Resources */,
+				686DB1732D05A8D000426C2C /* FilterTVC.xib in Resources */,
 				686A4B8D2D04A65400D4D5BD /* FoodWeekCollectionViewCell.xib in Resources */,
 				C7559C7A2D041D4800DF5907 /* StickyHeaderView.xib in Resources */,
 				686A4B892D04A5BC00D4D5BD /* FoodWeekTVCell.xib in Resources */,
@@ -243,6 +257,8 @@
 				C7559C5D2D040F0900DF5907 /* AppDelegate.swift in Sources */,
 				C75770332D04320100CDBBDC /* flatOffCVCell.swift in Sources */,
 				3E9994782D0547A00042A69C /* DishesTVC.swift in Sources */,
+				686DB1742D05A8D000426C2C /* FilterCVC.swift in Sources */,
+				686DB1752D05A8D000426C2C /* FilterTVC.swift in Sources */,
 				C757703F2D04542800CDBBDC /* flatDiscountCVCell.swift in Sources */,
 				C75770302D042EBA00CDBBDC /* CustomView.swift in Sources */,
 				3E9994722D053F5E0042A69C /* RestaurantsTVC.swift in Sources */,

@@ -12,6 +12,7 @@ enum EstimateItemStatus: CaseIterable {
     case foodweek
     case flateOff
     case dishes
+    case filter
     case restro
     
     func displayFoodWeek() -> [FoodWeek] {
